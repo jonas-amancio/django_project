@@ -7,38 +7,40 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>
-        Hello Index!
-    </h1>
+    <center>
+        <h1>
+            Hello Index!
+        </h1>
 
-    <img src="{% static 'images/django.png' %}">
+        <img src="{% static 'images/django.png' %}">
 
-    <h2>
-        {{curso}}
-    </h2>
+        <h2>
+            {{curso}}
+        </h2>
 
-    <h3>
-        {{linguagem}}
-    </h3>
+        <h3>
+            {{linguagem}}
+        </h3>
 
-    <h4>
-        Logado: {{logado}}
-    </h4>
+        <h4>
+            Logado: {{logado}}
+        </h4>
 
-    <table>
-        <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-        </tr>
-        {% for produto in produtos %}
-        <tr>
-            <td><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></td>
-            <td>{{produto.preco}}</td>
-        </tr>
-        {% endfor %}
-    </table>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+            {% for produto in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></td>
+                <td>{{produto.preco}}</td>
+            </tr>
+            {% endfor %}
+        </table>
 
-    <button onclick="teste();">Ativar JS</button>
+        <button onclick="teste();">Ativar JS</button>
+    </center>
 
     <script src="{% static 'js/script.js' %}"></script>
 </body>
